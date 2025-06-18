@@ -1,5 +1,5 @@
 import { Link } from "expo-router"
-import { Image, ImageBackground, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { Image, ImageBackground, StatusBar, Text, View } from 'react-native'
 
 const RootLayout = () => {
   return (
@@ -8,15 +8,15 @@ const RootLayout = () => {
 
       <ImageBackground
         source={require("../assets/images/bgg.jpg")}
-        style={{ flex: 1, width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }}
+        className="items-center justify-center flex-1 w-full h-full"
       >
         <Image
           source={require("../assets/images/react-logo.png")}
-          style={{ width: 130, height: 130, marginBottom: 18 }}
+          className="w-[130px] h-[130px] mb-4.5"
         />
-        <Text style={styles.h1}>MY FIRST</Text>
-        <Text style={styles.h1}>MOBILE APP</Text>
-        <Link href="/profile" style={{ color: "gray", marginTop: 10 }}>
+        <Text className="px-10 py-2 my-3 text-3xl text-white bg-red-500">MY FIRST</Text>
+        <Text className="text-2xl font-bold text-white">MOBILE APP</Text>
+        <Link href="/profile" className="text-gray-500 mt-2.5 ">
           Go to profile
         </Link>
       </ImageBackground>
@@ -25,11 +25,3 @@ const RootLayout = () => {
 }
 
 export default RootLayout
-
-const styles = StyleSheet.create({
-  h1: {
-    fontSize: 24,
-    color: "#e3e3e3",
-    marginBottom: 5,
-  },
-})
