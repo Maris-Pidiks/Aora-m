@@ -10,8 +10,8 @@ const RootLayout = () => {
         source={require("../assets/images/logo.png")}
         className="w-[170px] h-[50px] mb-10"
       />
-      <Text className="text-2xl font-bold text-white">MY FIRST</Text>
-      <Text className="mb-5 text-2xl font-bold text-white">MOBILE APP</Text>
+      <Text className="text-2xl text-white font-pextralight">TEST MOBILE APP</Text>
+      <Text className="mb-5 text-2xl text-white font-pbold">CONCEPTS</Text>
       <Link href="/profile" className="mt-4 mb-5 text-gray-500 ">
         Go to profile
       </Link>
