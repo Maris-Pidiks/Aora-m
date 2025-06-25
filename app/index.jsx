@@ -41,13 +41,13 @@ const RootLayout = () => {
           </View>
 
           <Text className="mx-8 mt-8 text-sm leading-relaxed text-center text-gray-100 font-pregular">
-            Where creativity meets innovations - embark on a journey of limitless exploration with Aora. 1:09:20
+            Where creativity meets innovations - embark on a journey of limitless exploration with Aora. 1:27:22.
           </Text>
 
           <CustomButton
             title="Continue with email"
             handlePress={() => router.push("./sign-in")}
-            containerStyles="w-full mt-7 ml-10 mr-10" />.
+            containerStyles="w-full mt-7 ml-10 mr-10" />
         </View>
       </ScrollView>
 
