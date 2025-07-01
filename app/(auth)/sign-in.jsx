@@ -6,6 +6,8 @@ import CustomButton from "../../components/CustomButton"
 import FormField from "../../components/FormField"
 import { images } from "../../constants"
 
+import { createUser } from "../../lib/appwrite"
+
 
 const SignIn = () => {
 
@@ -17,17 +19,17 @@ const SignIn = () => {
     const [isSubmitting, setIsSubmitting] = useState(false)
 
     const submit = () => {
-
+        createUser();
     }
 
     return (
         <SafeAreaView className="h-full bg-primary">
             <ScrollView>
-                <View className="justify-center w-full min-h-[75vh] px-4 my-6">
+                <View className="justify-center items-center w-full min-h-[75vh] px-4 my-6">
                     <Image source={images.logo} resizeMode="contain"
                         className="w-[135px] h-[85px]"
                     />
-                    <Text className="mt-3 text-2xl text-white text-semibold font-psemibold ">Log in to Aora</Text>
+                    <Text className="mt-1 mb-2 text-2xl text-white text-semibold font-psemibold ">Log in to Aora</Text>
 
                     <FormField
                         title="Email"
@@ -41,13 +43,13 @@ const SignIn = () => {
                         title="Password"
                         value={form.password}
                         handleChangeText={(e) => setForm({ ...form, password: e })}
-                        otherStyles="mt-7 mb-7"
+                        otherStyles="mt-7 mb-[40px]"
                     />
 
                     <CustomButton
                         title="Sign In"
                         handlePress={submit}
-                        containerStyles="mt-7"
+                        containerStyles=""
                         isLoading={isSubmitting}
                     />
 
